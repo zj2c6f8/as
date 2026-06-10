@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VEXOR AI</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- LOADING SCREEN -->
+    <div id="loader">
+        <div class="loader-content">
+            <h1>VEXOR AI</h1>
+            <p>Initializing Neural Core...</p>
+
+            <div class="progress">
+                <div class="progress-bar"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN APP -->
+    <div id="app">
+
+        <!-- HEADER -->
+        <header>
+            <div class="logo">
+                ⚡ VEXOR AI
+            </div>
+
+            <div class="header-buttons">
+                <button class="gold-btn">
+                    ChatGPT
+                </button>
+
+                <button class="gold-btn">
+                    Gemini
+                </button>
+
+                <button class="gold-btn">
+                    GitHub Login
+                </button>
+            </div>
+        </header>
+
+        <!-- HERO -->
+        <section class="hero">
+
+            <h1>
+                Black Gold AI Studio
+            </h1>
+
+            <p>
+                Generate HTML, CSS, JS, Python, Java,
+                Linux Commands and Full Websites.
+            </p>
+
+        </section>
+
+        <!-- AI PANEL -->
+        <section class="workspace">
+
+            <div class="left-panel">
+
+                <h2>AI Prompt</h2>
+
+                <textarea id="prompt"
+                    placeholder="Example: Create a responsive portfolio website">
+                </textarea>
+
+                <button id="generateBtn" class="generate-btn">
+                    Generate Code
+                </button>
+
+            </div>
+
+            <div class="right-panel">
+
+                <h2>Generated Code</h2>
+
+                <pre id="codeOutput">
+Welcome to VEXOR AI...
+                </pre>
+
+            </div>
+
+        </section>
+
+        <!-- LIVE PREVIEW -->
+        <section class="preview-section">
+
+            <div class="preview-header">
+                🌐 Live Preview
+            </div>
+
+            <iframe id="previewFrame"></iframe>
+
+        </section>
+
+        <!-- DEPLOY SECTION -->
+        <section class="deploy-section">
+
+            <h2>
+                Deployment Center
+            </h2>
+
+            <div class="deploy-buttons">
+
+                <button class="deploy-btn">
+                    Push To GitHub
+                </button>
+
+                <button class="deploy-btn">
+                    Deploy To Vercel
+                </button>
+
+            </div>
+
+            <div class="live-url">
+
+                <input
+                    type="text"
+                    placeholder="Live URL will appear here..."
+                    readonly
+                >
+
+            </div>
+
+        </section>
+
+        <!-- CHAT SECTION -->
+        <section class="chat-section">
+
+            <div class="chat-header">
+                🤖 VEXOR AI Assistant
+            </div>
+
+            <div class="chat-box" id="chatBox">
+
+                <div class="ai-message">
+                    Welcome Sidhu. How can I help you today?
+                </div>
+
+            </div>
+
+            <div class="chat-input">
+
+                <input
+                    type="text"
+                    id="chatInput"
+                    placeholder="Type your message..."
+                >
+
+                <button id="sendBtn">
+                    Send
+                </button>
+
+            </div>
+
+        </section>
+
+        <!-- FOOTER -->
+        <footer>
+
+            <h3>
+                POWERED BY REAL SITHUWA
+            </h3>
+
+            <p>
+                VEXOR AI © 2026
+            </p>
+
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
