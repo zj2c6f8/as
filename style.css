@@ -1,0 +1,349 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Orbitron',sans-serif;
+}
+
+body{
+background:#050505;
+color:#ffffff;
+overflow-x:hidden;
+}
+
+/* LOADER */
+
+#loader{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:#000;
+display:flex;
+justify-content:center;
+align-items:center;
+z-index:9999;
+}
+
+.loader-content{
+text-align:center;
+}
+
+.loader-content h1{
+color:#FFD700;
+font-size:3rem;
+margin-bottom:20px;
+text-shadow:0 0 20px #FFD700;
+}
+
+.loader-content p{
+color:#ccc;
+margin-bottom:20px;
+}
+
+.progress{
+width:300px;
+height:10px;
+background:#222;
+border-radius:20px;
+overflow:hidden;
+}
+
+.progress-bar{
+width:0%;
+height:100%;
+background:linear-gradient(90deg,#FFD700,#B8860B);
+animation:loading 3s linear forwards;
+}
+
+@keyframes loading{
+100%{
+width:100%;
+}
+}
+
+/* APP */
+
+#app{
+display:none;
+}
+
+/* HEADER */
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px;
+background:#0d0d0d;
+border-bottom:1px solid #222;
+position:sticky;
+top:0;
+z-index:100;
+}
+
+.logo{
+font-size:2rem;
+color:#FFD700;
+font-weight:900;
+}
+
+.header-buttons{
+display:flex;
+gap:10px;
+}
+
+.gold-btn{
+background:#FFD700;
+color:#000;
+border:none;
+padding:10px 15px;
+border-radius:8px;
+cursor:pointer;
+font-weight:bold;
+transition:.3s;
+}
+
+.gold-btn:hover{
+transform:scale(1.05);
+box-shadow:0 0 15px #FFD700;
+}
+
+/* HERO */
+
+.hero{
+text-align:center;
+padding:80px 20px;
+}
+
+.hero h1{
+font-size:3rem;
+color:#FFD700;
+margin-bottom:20px;
+}
+
+.hero p{
+color:#aaa;
+max-width:700px;
+margin:auto;
+}
+
+/* WORKSPACE */
+
+.workspace{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:20px;
+padding:20px;
+}
+
+.left-panel,
+.right-panel{
+background:#111;
+padding:20px;
+border-radius:15px;
+border:1px solid #222;
+}
+
+.left-panel h2,
+.right-panel h2{
+color:#FFD700;
+margin-bottom:15px;
+}
+
+textarea{
+width:100%;
+height:250px;
+background:#000;
+color:#FFD700;
+border:1px solid #333;
+border-radius:10px;
+padding:15px;
+resize:none;
+}
+
+.generate-btn{
+margin-top:15px;
+width:100%;
+padding:15px;
+background:#FFD700;
+color:#000;
+border:none;
+border-radius:10px;
+font-weight:bold;
+cursor:pointer;
+}
+
+.generate-btn:hover{
+box-shadow:0 0 20px #FFD700;
+}
+
+#codeOutput{
+background:#000;
+color:#00ff88;
+min-height:300px;
+padding:15px;
+border-radius:10px;
+overflow:auto;
+}
+
+/* PREVIEW */
+
+.preview-section{
+padding:20px;
+}
+
+.preview-header{
+color:#FFD700;
+margin-bottom:10px;
+font-size:1.2rem;
+}
+
+#previewFrame{
+width:100%;
+height:450px;
+border:none;
+background:white;
+border-radius:15px;
+}
+
+/* DEPLOY */
+
+.deploy-section{
+padding:20px;
+text-align:center;
+}
+
+.deploy-section h2{
+color:#FFD700;
+margin-bottom:20px;
+}
+
+.deploy-buttons{
+display:flex;
+justify-content:center;
+gap:15px;
+flex-wrap:wrap;
+}
+
+.deploy-btn{
+background:#FFD700;
+color:#000;
+border:none;
+padding:15px 25px;
+border-radius:10px;
+font-weight:bold;
+cursor:pointer;
+}
+
+.deploy-btn:hover{
+box-shadow:0 0 20px #FFD700;
+}
+
+.live-url{
+margin-top:20px;
+}
+
+.live-url input{
+width:80%;
+max-width:600px;
+padding:15px;
+border:none;
+border-radius:10px;
+background:#111;
+color:#FFD700;
+}
+
+/* CHAT */
+
+.chat-section{
+padding:20px;
+}
+
+.chat-header{
+color:#FFD700;
+margin-bottom:15px;
+}
+
+.chat-box{
+background:#111;
+height:300px;
+overflow-y:auto;
+border-radius:15px;
+padding:15px;
+border:1px solid #222;
+}
+
+.ai-message{
+background:#1a1a1a;
+padding:12px;
+border-radius:10px;
+color:#FFD700;
+margin-bottom:10px;
+}
+
+.chat-input{
+display:flex;
+gap:10px;
+margin-top:15px;
+}
+
+.chat-input input{
+flex:1;
+padding:15px;
+border:none;
+border-radius:10px;
+background:#111;
+color:#fff;
+}
+
+.chat-input button{
+background:#FFD700;
+color:#000;
+border:none;
+padding:15px 20px;
+border-radius:10px;
+cursor:pointer;
+font-weight:bold;
+}
+
+/* FOOTER */
+
+footer{
+margin-top:40px;
+text-align:center;
+padding:30px;
+border-top:1px solid #222;
+}
+
+footer h3{
+color:#FFD700;
+margin-bottom:10px;
+}
+
+footer p{
+color:#777;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+.workspace{
+grid-template-columns:1fr;
+}
+
+.hero h1{
+font-size:2rem;
+}
+
+.header-buttons{
+flex-wrap:wrap;
+}
+
+.live-url input{
+width:100%;
+}
+
+}
